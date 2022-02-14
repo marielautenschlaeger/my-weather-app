@@ -19,16 +19,22 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
+let humidityElement= document.querySelector("#humidity");
+let windElement=document.querySelector("#wind");
 let dateElement = document.querySelector("#date");
+let iconElement= document.querySelector("#current-weather-icon");
 dateElement.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function showWeather(response) {
   document.querySelector("#city-replace").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#description").innerHTML = response.data.weather[0].main;
+  windElement.innerHTML=Math.round(response.data.wind.speed);
+  humidityElement.innerHTML= response.data.main.humidity;
+    iconElement.setAttribute(
+      "src",
+ `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+ );    
 }
 
 function searchCity(city) {
