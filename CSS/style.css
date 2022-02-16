@@ -24,3 +24,13 @@ h4 {
 .githublink {
   text-align: center;
 }
+.temperature {
+  font-size: 20px;
+}
+
+.celsius-link {
+  color: black;
+}
+.fahrenheit-link {
+  color: black;
+}
