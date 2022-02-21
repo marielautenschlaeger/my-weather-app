@@ -25,6 +25,37 @@ let dateElement = document.querySelector("#date");
 let iconElement= document.querySelector("#current-weather-icon");
 dateElement.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function displayForecast () {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML= `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach (function (day) {
+
+  forecastHTML=   forecastHTML+ 
+  `
+                <div class="col-2,5">
+                    <div class="card-body">
+                        <h5 class="card-title">${day}</h5>
+                        <div class="row">
+                            <div class="col">
+                                <img src="VISUALS/cloudy.png" class="weather-icon" alt="cloud" width="30px">
+                            </div>
+                            <div class="col"> 
+                                13°C 
+                            </div>
+                        </div>
+                    </div>
+                    </div> 
+                    `;
+                    });              
+
+  forecastElement.innerHTML=forecastHTML +`</div>`;
+  forecastElement.innerHTML= forecastHTML;
+                  }
+
+
+
 
 
 function showWeather(response) {
@@ -81,3 +112,4 @@ celsiusLink.addEventListener ("click", displayCelsiusTemperature);
 
 
 searchCity("Paris");
+displayForecast();
