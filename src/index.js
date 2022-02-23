@@ -25,25 +25,34 @@ let dateElement = document.querySelector("#date");
 let iconElement= document.querySelector("#current-weather-icon");
 dateElement.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function formatDay(timestamp){
+let date= new Date (timestamp*1000);
+let day= date.getDay();
+let days= ["Sun", "Mon", "Tue", "Wed", "Thu","Fri", "Sat"];
+
+return days[day];
+}
+
 function displayForecast (response) {
-  console.log(response.data.daily);
+  let forecast= response.data.daily;
+
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML= `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat"];
-  days.forEach (function (day) {
+  forecast.forEach (function (forecastDay) {
 
   forecastHTML=   forecastHTML+ 
   `
                 <div class="col-2,5">
                     <div class="card-body">
-                        <h5 class="card-title">${day}</h5>
+                        <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
                         <div class="row">
                             <div class="col">
-                                <img src="VISUALS/cloudy.png" class="weather-icon" alt="cloud" width="30px">
+                                <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" class="weather-icon" alt="cloud" width="30px">
                             </div>
                             <div class="col"> 
-                                13°C 
+                                ${forecastDay.temp.max} °C
                             </div>
                         </div>
                     </div>
