@@ -9,8 +9,8 @@ h1 {
 }
 .current-date {
   display: block;
-  text-align: left;
-  padding-top: 60px;
+  text-align: center;
+  padding-top: 75px;
 }
 .weather-app {
   border: 1px solid #5f6368;
@@ -20,6 +20,11 @@ h1 {
 }
 h4 {
   text-decoration: underline;
+  padding-left: 5px;
+}
+
+.h5 {
+  text-align: right;
 }
 .githublink {
   text-align: center;
@@ -33,4 +38,7 @@ h4 {
 }
 .fahrenheit-link {
   color: black;
+}
+.weather-forecast {
+  text-align: center;
 }
