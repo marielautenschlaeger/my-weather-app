@@ -19,22 +19,22 @@
 
             <form class="search-form" id="search-form">
                 <div class="row">
-                    <div class="col-9">
-                        <input type="search" placeholder="🔍Choose location..." autofocus="on" autocomplete="off"
+                    <div class="col-6">
+                        <input type="search" placeholder="SEARCH..." autofocus="on" autocomplete="off"
                             id="typed-city" class="form-control shadow-sm" />
                     </div>
-                    <div class="col-3">
-                        <input type="submit" value="Search" class="form-control btn btn-light shadow-sm" />
+                    <div class="col-6">
+                        <span class="current-date" id="date"> </span>
                     </div>
                 </div>
             </form>
             </br>
 
-            <div class="row">
-                <div class="col-8">
+            <div class="row ">
+                <div class="col-12">
                     <div class="card">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-5">
                                 <img 
                                 src="" 
                                 class="current-weather-icon"
@@ -42,9 +42,9 @@
                                 alt="cloud" 
                                 width="90px">
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <div class="card-body">
-                                    <h5 class="card-title" id="city-replace"> Paris</h5>
+                                    <h5 class="card-title" id="city-replace"> PARIS</h5>
                                     <div class="description" id="description"></div>
                                     <span class="temperature" id="temperature"></span><span class="units">
                                         <a href="#" class = "celsius-link" id="celsius-link">°C</a> |
@@ -56,18 +56,17 @@
                                 </ul>
                                 </div>
                             </div>
+                            <div class="col-1">
+
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-4">
-                    <div class="current-date" id="date"> </div>
-                </div>
             </div>
             </br>
-            <h4>5 Day Forecast </h4>
+            <h4 class="d-flex justify-content-center">5 Day Forecast </h4>
 
-            <div class ="weather-forecast" id="forecast"></div>
+            <div class ="weather-forecast d-flex justify-content-center" id="forecast"></div>
                
 
                

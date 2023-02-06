@@ -10,17 +10,27 @@ h1 {
 .current-date {
   display: block;
   text-align: center;
-  padding-top: 75px;
+  padding-top: 5px;
+  font-family: 'baskerville display pt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
 }
+
 .weather-app {
-  border: 1px solid #5f6368;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  border: 1px solid #4d5054;
   padding: 10px;
   margin-top: 10px;
   max-width: 750px;
+  border-radius: 7px 7px 7px 7px;
 }
+
 h4 {
   text-decoration: underline;
   padding-left: 5px;
+  font-family:'aviano sans';
+  font-size: 24px;
 }
 
 .h5 {
@@ -31,14 +41,73 @@ h4 {
 }
 .temperature {
   font-size: 20px;
+  font-family:'aviano sans';
+  text-align: center;
 }
 
 .celsius-link {
-  color: black;
+  color: rgb(26, 25, 25);
+  font-family:'aviano sans';
+  font-size: 24px;
+  text-align: center;
 }
 .fahrenheit-link {
-  color: black;
+  color: rgb(26, 25, 25);
+  font-family:'aviano sans';
+  font-size: 24px;
+  text-align: center;
 }
 .weather-forecast {
   text-align: center;
+  font-family:'aviano sans';
+  font-size: 16px;
+}
+
+@font-face {
+    font-family: 'aviano sans';
+    src: url(aviano_sans_regular-webfont.woff) format('woff');
+} 
+@font-face {
+    font-family: 'baskerville display pt';
+    src: url(baskerville_display_pt_webfont.woff) format('woff');
+}
+
+h5{
+  font-family:'aviano sans';
+  font-size: 24px;
+}
+h4{
+  font-family: 'baskerville display pt';
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+.placeholder{
+  font-family:'aviano sans';
+  font-size: 24px; 
+}
+.description{
+  font-family:'aviano sans';
+  font-size: 16px; 
+}
+#humidity{
+  font-family:'aviano sans';
+  font-size: 16px; 
+  text-align: center;
+}
+#wind{
+  font-family:'aviano sans';
+  font-size: 16px; 
+  text-align: center;
+}
+.card-body{
+    font-family:'aviano sans';
+    font-size: 16px; 
+}
+.form-control{
+  border-color: #e2d1c3 !important;
+  font-family:'aviano sans';
+  font-size: 16px;
+
 }
